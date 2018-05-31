@@ -124,9 +124,9 @@ bot.on('callback_query', function (CallBackData) {
     bot.answerCallbackQuery(CallBackData.id,{text:'greengreen'});
     bot.sendMessage(CallBackData.message.chat.id,'yoyoyo');
   } else if (CallBackData.data === 'location_confirm') { // on confirmation of report
-    latLong = _.split(_.split(CallBackData.message.text,'\n')[0],':')[1]
-    address = _.split(CallBackData.message.text,'\n')[1];
-    humanDate = timestamp.toDate(CallBackData.message.date);
+    var latLong = _.split(_.split(CallBackData.message.text,'\n')[0],':')[1];
+    var address = _.split(CallBackData.message.text,'\n')[1];
+    var humanDate = timestamp.toDate(CallBackData.message.date);
     console.log(CallBackData.message.text);
     console.log('Coords:'+latLong);
     console.log('Address:'+address); //address
