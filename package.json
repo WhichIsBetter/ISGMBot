@@ -1,12 +1,17 @@
 {
   "name": "isgmbot",
   "version": "1.0.0",
+  "private": true,
   "description": "I See Green Man Bot",
   "main": "server.js",
   "dependencies": {
+    "@google/maps": "^0.4.6",
     "express": "^4.16.3",
+    "fs": "0.0.1-security",
     "geolocation-utils": "^1.1.1",
-    "node-telegram-bot-api": "^0.30.0"
+    "lodash": "^4.17.10",
+    "node-telegram-bot-api": "^0.30.0",
+    "unix-timestamp": "^0.2.0"
   },
   "devDependencies": {},
   "scripts": {
