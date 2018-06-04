@@ -12,11 +12,54 @@ var googleMapsClient = require('@google/maps').createClient({
 
 // expiry for each Report
 const reportExpiry = 2*60*60; //2hrs (2hr*60min*60secs)
+const nearbyRange = 300; //range to prevent cross over.
+
+function recentReports(data) { // extract recent (based on reportExpiry) reports
+  var recentReportKeys = [];
+  console.log('recentReportKeys Initialized');
+  console.log('recentReportKeys: '+recentReportKeys);
+  var nowTime = _.round(_.now()/1000);
+  var reportKeys = _.keys(data.reports);
+  for (var i = 0; i < reportKeys.length; i++) { 
+    if (nowTime - _.toNumber(reportKeys[i]) < reportExpiry ) {
+        recentReportKeys.push(reportKeys[i]);
+        console.log('recentReportKeys: '+recentReportKeys);
+    };
+  }
+  return recentReportKeys;
+};
+
+function coordToLatLong(latlong) { //coord to lat long format for geolocation
+  latlong = _.split(latlong,",",2)
+  return {latitude: _.toNumber(latlong[0]), longitude: _.toNumber(latlong[1])}
+};
+
+function proximityTest(location,recentLoc,testArchive) { // returns Pass/Fail
+  var locToTest = coordToLatLong(location); 
+  var recentLoc = recentLoc; //returns Array
+  var testArchive = testArchive;
+  var passFail = 0 //passFail > 0 = proximity test fail
+  for (var i = 0; i < recentLoc.length; i++) {
+    console.log(geolocate.distanceTo(locToTest,coordToLatLong(testArchive.reports[recentLoc[0]].coord)));
+    if (geolocate.distanceTo(locToTest,coordToLatLong(testArchive.reports[recentLoc[0]].coord)) < nearbyRange ) {
+      passFail = passFail+1; //cos location to test is too near
+    } else {
+      passFail = passFail+0;
+    };
+  };
+  if (passFail === 0 ) {
+    console.log('Proximity Test PASSed!');
+    return 'PASS';
+  } else {
+    console.log('Proximity Test FAILed!');
+    return 'FAIL';
+  };
+};
+// geolocate.distanceTo(from: Location, to: Location)
 
 //report JSON Schema
-// {
-//   "report_id": 1,
-//   "date":,
+// "date":{
+//   "report_id":,
 //   "humanDate":"",
 //   "from":{},
 //   "chat":{},
@@ -28,8 +71,8 @@ const reportExpiry = 2*60*60; //2hrs (2hr*60min*60secs)
 const token = '523462820:AAGRWjmVftMe5w2OAOcOgCIm06e0jaZcIsk';
 
 //webHook URL
-const hookURL = 'ffd54e84.ngrok.io'
-const port = 8443; //webHook port
+const hookURL = 'isgmbot.glitch.me'
+var port = process.env.PORT; //webHook port
 const options = {
   webHook: {
     'port': port,
@@ -59,12 +102,12 @@ bot.on('message', function onMessage(msg) {
   if (msg.text == '/start') {
     bot.sendMessage(
       msg.chat.id,
-      'Hi There! Would you like to report a GreenMan Sighting?'
+      'Greetings! Would you like to report a GreenMan Sighting?'
       +'\n\u{1F4CE}Simply \"share location\" to report a sighting or'
       +'\n\u{1F438}To get to get the latest sightings for the past 1.5hr',
       {'reply_markup':{
           'inline_keyboard':[[
-            {text:'\u{1F4CE} Share Locaton',callback_data:'main_Report'},
+            {text:'How to Make A Report',callback_data:'main_Report'},
             {text:'\u{1F438} Sightings',callback_data:'main_GreenMan'}
           ]]
         }
@@ -90,7 +133,7 @@ bot.on('location', function onMessage(msg) {
       // check if have duplicate
       // if not duplicate confirm
       // save in json after confirm
-      address = response.json.results[0].formatted_address
+      var address = response.json.results[0].formatted_address
       bot.sendMessage(msg.chat.id,
         '\u{1F4CD}:'+ msg.location.latitude+','+msg.location.longitude
         +'\n'+address,
@@ -120,20 +163,51 @@ bot.on('callback_query', function (CallBackData) {
   console.log(CallBackData);
   if (CallBackData.data === 'main_Report') {
     bot.answerCallbackQuery(CallBackData.id,{text:'awaiting location...',show_alert:true});
+    bot.sendMessage(CallBackData.message.chat.id,'Simply tap on \u{1F4CE} to share the location and follow the prompts after that.');
   } else if (CallBackData.data === 'main_GreenMan') { // on calling of sitred
-    bot.answerCallbackQuery(CallBackData.id,{text:'greengreen'});
-    bot.sendMessage(CallBackData.message.chat.id,'yoyoyo');
+    bot.answerCallbackQuery(CallBackData.id,{text:'Loading Recent Reports...'}); //load recent reports
+    var archive = fs.readFileSync('reports.json');
+    archive = JSON.parse(archive);
+    console.log('numOfReports:'+archive.numOfReports);
+    var recentKeys = recentReports(archive);
+    recentKeys = recentKeys.sort();
+    var message = ""
+    console.log('KeysLength: '+recentKeys.length);
+    for (var i = 0; i < recentKeys.length; i++) {
+      console.log('Keynumber:'+i);
+      report = archive.reports[recentKeys[i]];
+      var repCoord = _.split(report.coord,',',2);
+      console.log('Coord:'+repCoord[0]);
+      bot.sendLocation(CallBackData.message.chat.id,_.toNumber(repCoord[0]),_.toNumber(repCoord[1]));
+      var message = message+'\u{1F4CD}:'+report.address;
+      //bot.sendMessage(CallBackData.message.chat.id,message);
+      //message = message+'\n\u{1F4CD}:'+report.coord+'\n'+report.address;
+      };
+    //bot.sendMessage(CallBackData.message.chat.id,message);
   } else if (CallBackData.data === 'location_confirm') { // on confirmation of report
     var latLong = _.split(_.split(CallBackData.message.text,'\n')[0],':')[1];
     var address = _.split(CallBackData.message.text,'\n')[1];
-    var humanDate = timestamp.toDate(CallBackData.message.date);
+    var humanDate = timestamp.toDate(CallBackData.message.date+(8*60*60)); // convert to readable time n to SGT
     console.log(CallBackData.message.text);
     console.log('Coords:'+latLong);
     console.log('Address:'+address); //address
     console.log('HumanDate:'+humanDate);
     // write report to reports.json
+    var report_id; // declare report_id
+    console.log('report:'+JSON.stringify(report));
+    var archive = fs.readFileSync('reports.json'); //extract reports
+    archive = JSON.parse(archive);
+    console.log('numOfReports:'+archive.numOfReports);
+    if (archive.numOfReports <= 0 || archive.numOfReports === null) {
+      archive.numOfReports = 0  //RESET numOfReports if corrupted
+      report_id = 1;  //reset report_id
+    } else {
+      report_id = archive.numOfReports+1;
+    };
+    console.log('current report_id is '+report_id);
+    
     var report = {
-      "report_id": 1,
+      "reportID":report_id,
       "date":CallBackData.message.date,
       "humanDate":humanDate,
       "from":CallBackData.from,
@@ -141,14 +215,39 @@ bot.on('callback_query', function (CallBackData) {
       "coord":latLong, // lat,lng
       "address":address
     };
-    console.log('report:'+report);
-    var reports = fs.readFileSync('reports.json'); //extract reports
-    console.log('report:'+JSON.parse(reports));
-    reports = reports+report;
-    console.log('report:'+JSON.parse(reports));
-    var dataToWrite = JSON.stringify(report, null, 2);
-    fs.writeFileSync('reports.json', dataToWrite);
-    console.log('file writted');
+    
+    var keys = _.keys(archive.reports);  // generate array of keys
+    console.log(keys);
+    
+    var recentKeys = recentReports(archive);
+    console.log('recentKeys: '+recentKeys);
+    console.log('print: '+archive.reports[recentKeys[0]].coord);
+    var coord1 = coordToLatLong(archive.reports[recentKeys[0]].coord);
+    console.log(coord1);
+    var coord2 = coordToLatLong(archive.reports[recentKeys[1]].coord);
+    console.log('dist:'+geolocate.distanceTo(coord1,coord2));
+
+    var dateNow = _.round(_.now()/1000); // generate current date
+    console.log('datenow: '+dateNow);
+    if (keys.includes(_.toString(CallBackData.message.date))) { //checks for repeat
+      console.log('report already exist');
+      bot.answerCallbackQuery(CallBackData.id,{text:'Error! Report Already Exist! Please do not reconfirm old reports'});
+    } else if (dateNow-CallBackData.message.date >= 45) { // checks for timeout
+      console.log('report time-out!');
+      bot.answerCallbackQuery(CallBackData.id,{text:'Error! Timeout! U have 30s to confirm reports!'});       
+    } else if (proximityTest(report.coord,recentKeys,archive) === 'FAIL') { //check for proximity
+      console.log('Proximity Test Fail!');
+      bot.answerCallbackQuery(CallBackData.id,{text:'Error! Reported location to close to one of recently reported locations'});
+    } else {
+      // check for location proximity with recent reports
+      archive.reports[_.toString(CallBackData.message.date)] = report; //appends report to archive
+      archive.numOfReports = archive.numOfReports+1; //updates total num of reports
+      console.log(JSON.stringify(archive));
+      var dataToWrite = JSON.stringify(archive, null, 2);
+      fs.writeFileSync('reports.json', dataToWrite);
+      console.log('file written');
+      bot.answerCallbackQuery(CallBackData.id,{text:'Report Lodged!'});
+    };    
   } else if (CallBackData.data === 'location_cancel') { //on report cancel
     bot.answerCallbackQuery(CallBackData.id,{text:'Noted!'});
   };
@@ -156,5 +255,5 @@ bot.on('callback_query', function (CallBackData) {
 
 bot.on('error', function () {
   //bot.sendMessage(msg.chat.id,error.code);
-  console.log(error.code);
+  console.log(error);
 });
