@@ -1,5 +1,676 @@
 {
-  "numOfReports": 0,
+  "numOfReports": 31,
   "reports": {
+    "1528447502": {
+      "reportID": 1,
+      "date": 1528447502,
+      "humanDate": "2018-06-08T16:45:02.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.319033,103.862354",
+      "address": "24 Bendemeer Rd, Singapore 330024"
+    },
+    "1528447639": {
+      "reportID": 2,
+      "date": 1528447639,
+      "humanDate": "2018-06-08T16:47:19.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.311854,103.862166",
+      "address": "116 Lavender St, Singapore 338730"
+    },
+    "1528448160": {
+      "reportID": 3,
+      "date": 1528448160,
+      "humanDate": "2018-06-08T16:56:00.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.312595,103.861787",
+      "address": "184 Lavender St, Singapore 338752"
+    },
+    "1528448346": {
+      "reportID": 4,
+      "date": 1528448346,
+      "humanDate": "2018-06-08T16:59:06.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.329534,103.852404",
+      "address": "PIE, Singapore"
+    },
+    "1528448566": {
+      "reportID": 5,
+      "date": 1528448566,
+      "humanDate": "2018-06-08T17:02:46.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.314935,103.854519",
+      "address": "30 Sing Ave, Singapore 217874"
+    },
+    "1528450643": {
+      "reportID": 6,
+      "date": 1528450643,
+      "humanDate": "2018-06-08T17:37:23.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.313177,103.86124",
+      "address": "202 Lavender St, Singapore 338762"
+    },
+    "1528451299": {
+      "reportID": 7,
+      "date": 1528451299,
+      "humanDate": "2018-06-08T17:48:19.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.312037,103.864169",
+      "address": "160B Kallang Ave, Singapore 339507"
+    },
+    "1528451780": {
+      "reportID": 8,
+      "date": 1528451780,
+      "humanDate": "2018-06-08T17:56:20.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.312333,103.860225",
+      "address": "30 Foch Rd, Singapore 209276"
+    },
+    "1528451890": {
+      "reportID": 9,
+      "date": 1528451890,
+      "humanDate": "2018-06-08T17:58:10.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.308188,103.869092",
+      "address": "398 Kallang Rd, Singapore 339098"
+    },
+    "1528455262": {
+      "reportID": 10,
+      "date": 1528455262,
+      "humanDate": "2018-06-08T18:54:22.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.315682,103.850845",
+      "address": "45 Owen Rd, Singapore 210045"
+    },
+    "1529149854": {
+      "reportID": 11,
+      "date": 1529149854,
+      "humanDate": "2018-06-16T19:50:54.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.331595,103.908231",
+      "address": "116 Bedok Reservoir Rd, Singapore"
+    },
+    "1529177559": {
+      "reportID": 12,
+      "date": 1529177559,
+      "humanDate": "2018-06-17T03:32:39.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.326907,103.907272",
+      "address": "Jln Eunos, Singapore"
+    },
+    "1529309714": {
+      "reportID": 13,
+      "date": 1529309714,
+      "humanDate": "2018-06-18T16:15:14.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.318333,103.860699",
+      "address": "Boon Keng Rd, Singapore"
+    },
+    "1533375428": {
+      "reportID": 14,
+      "date": 1533375428,
+      "humanDate": "2018-08-04T17:37:08.000Z",
+      "from": {
+        "id": 31486011,
+        "is_bot": false,
+        "first_name": "Swen",
+        "username": "swen_einhaus",
+        "language_code": "en-gb"
+      },
+      "chat": {
+        "id": 31486011,
+        "first_name": "Swen",
+        "username": "swen_einhaus",
+        "type": "private"
+      },
+      "coord": "1.335125,103.865636",
+      "address": "127 Potong Pasir Ave 1, Block 127, Singapore 350127"
+    },
+    "1533385318": {
+      "reportID": 15,
+      "date": 1533385318,
+      "humanDate": "2018-08-04T20:21:58.000Z",
+      "from": {
+        "id": 31486011,
+        "is_bot": false,
+        "first_name": "Swen",
+        "username": "swen_einhaus",
+        "language_code": "en-gb"
+      },
+      "chat": {
+        "id": 31486011,
+        "first_name": "Swen",
+        "username": "swen_einhaus",
+        "type": "private"
+      },
+      "coord": "1.334613,103.870449",
+      "address": "Bidadari Park Drive, Singapore"
+    },
+    "1533387962": {
+      "reportID": 16,
+      "date": 1533387962,
+      "humanDate": "2018-08-04T21:06:02.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.320357,103.871104",
+      "address": "252 Kallang Bahru, Singapore 339353"
+    },
+    "1533395788": {
+      "reportID": 17,
+      "date": 1533395788,
+      "humanDate": "2018-08-04T23:16:28.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.339434,103.898432",
+      "address": "25 Kaki Bukit Rd 2, Singapore 417850"
+    },
+    "1533402976": {
+      "reportID": 18,
+      "date": 1533402976,
+      "humanDate": "2018-08-05T01:16:16.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.331126,103.914193",
+      "address": "606 Bedok Reservoir Rd, Singapore 470606"
+    },
+    "1533416851": {
+      "reportID": 19,
+      "date": 1533416851,
+      "humanDate": "2018-08-05T05:07:31.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.319359,103.902868",
+      "address": "30 Eunos Cres, Singapore 409423"
+    },
+    "1533459908": {
+      "reportID": 20,
+      "date": 1533459908,
+      "humanDate": "2018-08-05T17:05:08.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.406024,103.897661",
+      "address": "265 Punggol Way, Singapore"
+    },
+    "1533494367": {
+      "reportID": 21,
+      "date": 1533494367,
+      "humanDate": "2018-08-06T02:39:27.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.330303,103.911411",
+      "address": "601 Bedok Reservoir Rd, Singapore 470601"
+    },
+    "1533528210": {
+      "reportID": 22,
+      "date": 1533528210,
+      "humanDate": "2018-08-06T12:03:30.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.305196,103.791915",
+      "address": "9 N Buona Vista Dr, Singapore 138588"
+    },
+    "1533528783": {
+      "reportID": 23,
+      "date": 1533528783,
+      "humanDate": "2018-08-06T12:13:03.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.406024,103.897661",
+      "address": "265 Punggol Way, Singapore"
+    },
+    "1533547994": {
+      "reportID": 24,
+      "date": 1533547994,
+      "humanDate": "2018-08-06T17:33:14.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.331697,103.908515",
+      "address": "116 Bedok Reservoir Rd, Singapore"
+    },
+    "1533549261": {
+      "reportID": 25,
+      "date": 1533549261,
+      "humanDate": "2018-08-06T17:54:21.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.322768,103.85468",
+      "address": "90 Whampoa Dr, Singapore 320090"
+    },
+    "1533549292": {
+      "reportID": 26,
+      "date": 1533549292,
+      "humanDate": "2018-08-06T17:54:52.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.386654,103.77187",
+      "address": "1 Segar Rd, Singapore 677738"
+    },
+    "1533549335": {
+      "reportID": 27,
+      "date": 1533549335,
+      "humanDate": "2018-08-06T17:55:35.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.322715,103.852795",
+      "address": "276 Balestier Rd, Singapore"
+    },
+    "1533549431": {
+      "reportID": 28,
+      "date": 1533549431,
+      "humanDate": "2018-08-06T17:57:11.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": -236475905,
+        "title": "ISGMBot Test",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "coord": "1.314306,103.784984",
+      "address": "39 Mount Sinai Rd, Singapore"
+    },
+    "1534226382": {
+      "reportID": 29,
+      "date": 1534226382,
+      "humanDate": "2018-08-14T13:59:42.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "address": "📍:1.319033,103.862354",
+      "deleted": "N"
+    },
+    "1534236242": {
+      "reportID": 30,
+      "date": 1534236242,
+      "humanDate": "2018-08-14T16:44:02.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "address": "📍:1.319054,103.86233",
+      "deleted": "N"
+    },
+    "1534236533": {
+      "reportID": 31,
+      "date": 1534236533,
+      "humanDate": "2018-08-14T16:48:53.000Z",
+      "from": {
+        "id": 306466291,
+        "is_bot": false,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "language_code": "en-SG"
+      },
+      "chat": {
+        "id": 306466291,
+        "first_name": "Your",
+        "last_name": "Imagination",
+        "username": "WhichIsBetter",
+        "type": "private"
+      },
+      "coord": "1.319057,103.862317",
+      "address": "24 Bendemeer Rd, Singapore 330024",
+      "deleted": "Y"
+    }
   }
 }

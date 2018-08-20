@@ -1,0 +1,10 @@
+{
+  "user": {
+    "reason": "text",
+    "date": "text"
+  },
+  "*WhichIsBetter*": {
+    "reason": "testing",
+    "date": "dato"
+  }
+}
